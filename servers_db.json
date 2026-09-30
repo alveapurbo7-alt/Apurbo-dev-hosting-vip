@@ -1,0 +1,11 @@
+{
+  "Jxe": {
+    "cmd": "python main.py",
+    "cwd": "",
+    "path": "/storage/emulated/0/ACCESS_TO_BAN/APURBO_HOSTING_LOGIN_REGISTER_BLUE_FIXED/user_files/Jxe",
+    "auto_restart": false,
+    "restart_interval": "1h",
+    "status": "stopped",
+    "last_start_time": 1790755508.0645304
+  }
+}

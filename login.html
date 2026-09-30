@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login — ApurboCloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#030711;--panel:rgba(7,16,34,.82);--line:rgba(90,164,255,.18);--blue:#2488ff;--cyan:#49c8ff;--text:#eef6ff;--muted:#7f91ad;--danger:#ff6b7a}
+body{min-height:100vh;background:radial-gradient(circle at 50% -10%,#12366d 0,transparent 38%),linear-gradient(145deg,#02050d,#061226 58%,#02050d);color:var(--text);font-family:Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(65,145,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(65,145,255,.045) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.orb{position:fixed;border-radius:50%;filter:blur(50px);opacity:.22;pointer-events:none}.orb.a{width:260px;height:260px;background:#087dff;top:-80px;left:-60px}.orb.b{width:300px;height:300px;background:#0054d6;right:-110px;bottom:-100px}
+.shell{width:min(100%,1040px);padding:28px;display:grid;grid-template-columns:1fr 430px;gap:44px;align-items:center}
+.brand{padding:20px}.brand-mark{width:58px;height:58px;border:1px solid rgba(73,200,255,.3);border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(36,136,255,.24),rgba(36,136,255,.05));box-shadow:0 0 40px rgba(36,136,255,.15);font-size:24px;color:#6bd2ff;margin-bottom:25px}
+.brand h1{font-family:Sora;font-size:clamp(2.3rem,5vw,4.2rem);letter-spacing:-.055em;line-height:1.03}.brand h1 span{color:#55caff}.brand p{max-width:480px;margin-top:18px;color:var(--muted);line-height:1.7}.pill{display:inline-flex;gap:8px;align-items:center;margin-top:24px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(19,72,145,.15);color:#a9dfff;font-size:12px;font-weight:700}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 24px 90px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);backdrop-filter:blur(22px)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:25px}.eyebrow{font-size:11px;color:#54c8ff;font-weight:800;text-transform:uppercase;letter-spacing:.16em}.title{font-family:Sora;font-size:25px;margin-top:7px}.sub{color:var(--muted);font-size:13px;margin-top:7px}.success{margin-bottom:18px;padding:11px 13px;border:1px solid rgba(54,211,153,.25);background:rgba(54,211,153,.08);border-radius:12px;color:#78f0c4;font-size:13px}.error{margin-bottom:18px;padding:11px 13px;border:1px solid rgba(255,107,122,.25);background:rgba(255,107,122,.08);border-radius:12px;color:#ff9ca7;font-size:13px}
+.group{margin:16px 0}.label{display:block;font-size:12px;color:#a8b8ce;font-weight:700;margin-bottom:8px}.input-wrap{position:relative}.input-wrap i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#6383a9;font-size:14px}.input{width:100%;height:48px;border-radius:13px;border:1px solid rgba(114,157,205,.16);outline:0;background:rgba(2,8,19,.7);color:var(--text);padding:0 14px 0 42px;font:500 14px Inter;transition:.2s}.input:focus{border-color:rgba(73,200,255,.62);box-shadow:0 0 0 4px rgba(36,136,255,.09)}.submit{width:100%;height:50px;margin-top:8px;border:0;border-radius:14px;color:#fff;font-weight:800;font-size:14px;cursor:pointer;background:linear-gradient(135deg,#087bff,#1aa9ff);box-shadow:0 12px 30px rgba(0,126,255,.25);transition:.2s}.submit:hover{transform:translateY(-1px);box-shadow:0 16px 36px rgba(0,126,255,.34)}.divider{display:flex;align-items:center;gap:12px;color:#526984;font-size:11px;margin:22px 0}.divider:before,.divider:after{content:"";height:1px;flex:1;background:rgba(90,164,255,.13)}.register{display:flex;justify-content:center;align-items:center;gap:8px;height:48px;border:1px solid rgba(90,164,255,.2);border-radius:13px;text-decoration:none;color:#cceaff;font-size:13px;font-weight:700;background:rgba(20,80,150,.08)}.register:hover{border-color:rgba(73,200,255,.45);background:rgba(20,100,190,.13)}.back{text-align:center;margin-top:20px}.back a{color:#7891ad;text-decoration:none;font-size:12px}.back a:hover{color:#61caff}
+@media(max-width:800px){.shell{grid-template-columns:1fr;max-width:500px;padding:18px}.brand{text-align:center;padding:8px}.brand-mark{margin:0 auto 18px}.brand p{margin-left:auto;margin-right:auto}.pill{margin-top:18px}.card{padding:24px;border-radius:22px}}
+</style>
+</head>
+<body>
+<div class="orb a"></div><div class="orb b"></div>
+<main class="shell">
+<section class="brand">
+  <div class="brand-mark"><i class="fa-solid fa-cloud"></i></div>
+  <h1>Welcome to<br><span>ApurboCloud</span></h1>
+  <p>Fast, secure and modern hosting management for your bots and applications. Everything you need, inside one clean dashboard.</p>
+  <div class="pill"><i class="fa-solid fa-shield-halved"></i> Secure hosting control panel</div>
+</section>
+<section>
+<div class="card">
+  <div class="card-head"><div><div class="eyebrow">Account access</div><div class="title">Sign in</div><div class="sub">Continue to your dashboard</div></div><i class="fa-solid fa-arrow-right-to-bracket" style="color:#4fc8ff;margin-top:4px"></i></div>
+  {% if success %}<div class="success"><i class="fa-solid fa-circle-check"></i> Account created successfully. Please sign in with your email and password.</div>{% endif %}{% if error %}<div class="error"><i class="fa-solid fa-circle-exclamation"></i> {{ error }}</div>{% endif %}
+  <form method="POST">
+    <div class="group"><label class="label">Email address</label><div class="input-wrap"><i class="fa-regular fa-envelope"></i><input class="input" type="email" name="email" placeholder="you@example.com" autocomplete="email"></div></div>
+    <div class="group"><label class="label">Password</label><div class="input-wrap"><i class="fa-solid fa-lock"></i><input class="input" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required></div></div>
+    <button class="submit" type="submit"><i class="fa-solid fa-right-to-bracket"></i>&nbsp; Sign in securely</button>
+  </form>
+  <div class="divider">NEW TO APURBOCLOUD?</div>
+  <a class="register" href="/register"><i class="fa-solid fa-user-plus"></i> Create a new account</a>
+  <div class="back"><a href="/"><i class="fa-solid fa-arrow-left"></i> Back to home</a></div>
+</div>
+</section>
+</main>
+</body>
+</html>
